@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namaste Indian Restaurant Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/4c3ceabe32.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fff5e1;
+      background-image: url('https://www.transparenttextures.com/patterns/cream-pixels.png');
+      color: #4a2c18;
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.8;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+      border-radius: 15px;
+    }
+
+    /* Header Section */
+    .header-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo-top {
+      width: 200px;
+      display: block;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      border: 2px solid #c2410c;
+      padding: 5px;
+      background: #fff8f0;
+    }
+
+    h1 {
+      color: #c2410c;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: #c2410c;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #a16207;
+      margin-top: 0rem;
+      font-style: italic;
+    }
+
+    /* Sticky Navigation Menu */
+    .menu-nav {
+      position: sticky;
+      top: 0;
+      background: #fff5e1;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      border-bottom: 2px solid #fcd34d;
+    }
+
+    .menu-nav a {
+      margin: 0 1rem;
+      color: #b45309;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu-nav a:hover {
+      color: #c2410c;
+    }
+
+    /* Section Styles */
+    h2 {
+      color: #b45309;
+      border-bottom: 2px dashed #fbbf24;
+      margin-top: 3rem;
+      font-size: 1.8rem;
+      padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    li {
+      background: #fff8f0;
+      padding: 0.7rem 1rem;
+      margin-bottom: 0.5rem;
+      border-left: 4px solid #f59e0b;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    li:hover {
+      background-color: #fef3c7;
+      transform: translateX(5px);
+      cursor: pointer;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .note {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-top: -0.5rem;
+    }
+
+    /* Chef Photo */
+    .chef-photo {
+      width: 300px; /* Increased size */
+      border-radius: 12px;
+      display: block;
+      margin: 1rem auto 2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      border: 2px solid #fbbf24;
+    }
+
+    /* Footer Section */
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px dashed #eab308;
+      font-size: 0.95rem;
+      color: #7c4b16;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 2rem 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-section">
+    <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/484038757_1046119160660609_6616291230310926137_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=X-sYdzaRWGIQ7kNvwGjDss8&_nc_oc=Adlc4UPrWQBVAn2knzgASQvh6WileYsP9294xsmmfqxwLaDiXKJsjWt4ZDnOdWZfEao&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=nDOxO0ojxQAUZoRnL95doA&oh=00_AfHixfpLkI-p57_UeX8OV97bdwEIgiHBe8jBS5GPDgostg&oe=67FE3E60" alt="Namaste Logo" class="logo-top" />
+    <h1>Namaste Indian Restaurant</h1>
+
+    
+    <p class="tagline">A Taste of India in Every Bite</p>
+  </header>
+
+  <nav class="menu-nav">
+    <a href="#starters">Starters</a>
+    <a href="#rice">Rice & Biryani</a>
+    <a href="#naan">Naan</a>
+    <a href="#tandoori">Tandoori Specialties</a>
+    <a href="#korma-madras-vindalo">spicy sauces levels</a>
+    <a href="#vegetarian">Vegetarian</a>
+    <a href="#curry">Curry & Chef Specialties</a>
+    <a href="#soft-drinks">Soft Drinks</a>
+    <a href="#dessert">Dessert</a>
+    <a href="#lassi">Lassi</a>
+    <a href="#hot-drinks">Hot Drinks</a>
+    <a href="#water">Water</a>
+  </nav>
+
+  <!-- Chef Photo -->
+  <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/481768235_1042112021061323_8876130331504474258_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RzTHkd_-XNwQ7kNvwEwgLxi&_nc_oc=AdlV0T0TsdkcuHA8TXzSInfVK6amXMSVfBwU3qoiqKA3JTPHpVmRwVuw0BTfqHenxiM&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=RfRsz5AWPWB5TZL3yO6NoQ&oh=00_AfFa6qrHmYsKuq0p8wqyXMOA24hYa1abdx4K91iBjEaWbA&oe=67FE1571" alt="Chef at Namaste Restaurant" class="chef-photo" />
+  <div class="chef-photo"></div>
+
+  <div class="section" id="starters">
+    <h2>🍽️ Starters</h2>
+    <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/470210286_8802942149797144_7186103036214815540_n.jpg?stp=c112.0.447.447a_dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=50ad20&_nc_ohc=l7O5GCL8wmoQ7kNvwHlaW_K&_nc_oc=Adknvge1T2ciIvpeYzmbiefAtwS5vU-e7gou1DnIM8sdiSX471ff_X3-mNE3yxLTW98&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=HWrDbESwLTxmduqHYsTdwg&oh=00_AfFm8IsQIVGUrM7bCZKbkMacMZeE6Fw9cYy_qLpQra_03g&oe=67FF644A" alt="appetizers" class="dish-photo">
+    <ul>
+      <li>Vegetable Samosa 🥟 65 EGP</li>
+      <li>Chicken Samosa 🍗🥟 75 EGP</li>
+      <li>Pappadoms (served with mango & chutney)🥭🌶️ 75 EGP</li>
+      <li>Paneer Pakora 🧀🧈 (Cheese in butter & fried) - 75 EGP</li>
+      <li>Raita / Kachumber Salad / Buhar Salad🥗💚 60 EGP</li>
+    </ul>
+  </div>
+
+  <div class="section" id="rice">
+    <h2>🍚🥘✨ Rice & Biryani</h2>
+    <img src="https://th.bing.com/th/id/OIP.XRK8LFFtcZ-UkXjjnY129gHaHa?w=228&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="Biryani" class="dish-photo">
+    <ul>
+      <li>Indian Basmati Rice 45 EGP</li>
+      <li>Vegetable Pullao (Basmati rice with Vegetable) 55 EGP</li>
+      <li>Sada Biryani (Biryani flavoured Indian rice) 75 EGP</li>
+      <li>Vegetable Biryani (Indian Rice with rice) 85 EGP</li>
+      <li>Murg Biryani (Chicken with Indian rice) 180 🐔🍛 EGP</li>
+      <li>Beef Biryani (Meat cooked with Indian rice) 185 🍛 EGP</li>
+      <li>Shrimp cooked Indian rice 250 🍤🍛 EGP</li>
+    </ul>
+  </div>
+
+  <div class="section" id="naan">
+    <h2>🧡🍞 Naan Bread</h2>
+    <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t1.6435-9/61989209_2264759586948799_2841848657102241792_n.jpg?stp=c128.0.781.781a_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=50ad20&_nc_ohc=St6ETdqTezAQ7kNvwFrE-aR&_nc_oc=Adn14ct3i-hFkDCatzrN8NZJnSlZZfVaKmd9hpmliKjXsZdDITQDLm_LrgRmGcGFXVs&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=-5iCV0DWXyOmbb2yoMUpXQ&oh=00_AfEe577LhQK-lZKSLd6D6jpINDdk6z4b4I4tSsWGKKTOzg&oe=6820EC1C" alt="naan" class="dish-photo">
+    <ul>
+      <li>Plain Nan 45 EGP</li>
+      <li>Garlic Nan 45 🧄🧈 EGP</li>
+      <li>Butter Nan 45 🧈 EGP</li>
+      <li>Mint Nan 45 🌿🧈 EGP</li>
+      <li>Potato & Onions 60 🧅🥔 EGP</li>
+      <li>Peshwari Nan 60 🥥🍇 EGP</li>
+      <li>Cheese Nan 60 🧀🧈 EGP</li>
+    </ul>
+  </div>
+
+  <div class="section" id="tandoori">
+    <h2>🍢🔥 Tandoori Specialties</h2>
+    <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t1.6435-9/62193803_2262778127146945_8147472898026635264_n.jpg?stp=c292.0.857.857a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=50ad20&_nc_ohc=wTljymS-qQEQ7kNvwGD0BZu&_nc_oc=Adl441h728yJXpJ0OctDxhNeErnbHzn7FrfzsX4hCnfc-UeaU_QZPiPtqiuRRJQt3II&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=ZYQAOw5ECT6vIdSttGfmDQ&oh=00_AfFvBYQbWST8xPtgFi0yFYl3S193fiHbKJk3T4PHjaAoYg&oe=6820EBAE" alt="tandoori" class="dish-photo">
+    <ul>
+      <li>Tandoori Chicken Tikka 250 EGP</li>
+      <li>Murgh Malai Tikka 250 EGP</li>
+      <li>Chicken Tikka (Nawab) 250 EGP</li>
+      <li>Seekh Kebab 275 EGP</li>
+      <li>Mixed Chicken Tandoori 🔥🔥🔥 300 EGP</li>
+      <li>Mixed (Seekh + Chicken Tikka) 🔥 350 EGP</li>
+      <li>Fish Tikka 300 EGP</li>
+      <li>King Prawn Tikka 400 EGP</li>
+      <li>Mixed Seafood (fish + King prawns) 🔥 500 EGP</li>
+    </ul>
+  </div>
+
+  <div class="Section" id="korma-madras-vindalo">
+    <h2>korma🥥🥛& madras🌶️& vindalo🥔🌶️(spicy sauces levels)🔥🔥🔥</h2>
+    <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/470242493_8802942129797146_5933210132726859305_n.jpg?stp=c96.0.608.608a_dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=50ad20&_nc_ohc=pspmQXV4SAgQ7kNvwEtvxrG&_nc_oc=AdmmpKXMsXEQhQ2n2rJO3KQ-4e6xjRsUmB39n3TCZm6RmE1GlVPy_Y2jKhjrn2W7674&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=HWrDbESwLTxmduqHYsTdwg&oh=00_AfFsJdoLuXemJB51KVoGv0LGdtwxiGouHDtnmc8zfEBaTg&oe=67FF78C7" alt="spicylevels" class="dish-photo">
+    <Ul>
+        <li>vegetable 🥦 170 EGP</li>
+        <li>Chicken 🍗 220 EGP</li>
+        <li>Beef 🍖 230 EGP</li>
+        <li>Lamb 🥩 350 EGP</li>
+        <li>Fish 🐟 300 EGP</li>
+        <li>Shrimp 🍤 400 EGP</li>
+    </Ul>
+  </div>
+
+  <div class="section" id="vegetarian">
+    <h2>🌿 Vegetarian</h2>
+    <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/482829065_9263372887087399_5933443788195711019_n.jpg?stp=c120.0.720.720a_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=50ad20&_nc_ohc=V3Hann9ZWIQQ7kNvwHKMsjZ&_nc_oc=Adn8hBAvAYe7ZQqRFgL7ZzTDw79rbS821uUARGmFQrKQ4bb51sPH1z2-oOA58hd907k&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=1pPAswIr2a3ZhEz5Z_BLcw&oh=00_AfHibLwVycrtWWEvwb_WT0-fEV0f6ORWXj9oVEqv1QygUg&oe=67FF5846" alt="Vegetarian" class="dish-photo">
+    <ul>
+      <li>Paneer Makhani  170 EGP</li>
+      <li>Paneer Tikka  170 EGP</li>
+      <li>Tandoori Salad  170 EGP</li>
+      <li>Mushroom Curry  170  EGP</li>
+      <li>Seasonal Vegetable Curry  170  EGP</li>
+      <li>Vegetable Jalfrezi  170  EGP</li>
+      <li>Aloo Mutter  170  EGP</li>
+      <li>Palak Paneer  170  EGP</li>
+      <li>Dal Makhani / Dal Tarka  100  EGP</li>
+      <li>Aloo Chana Masala  170  EGP</li>
+      <li>Potato Sag  170  EGP</li>
+      <li>Malay Kofta 170 EGP</li>
+      <li>Jira Aloo 170 EGP</li>
+    </ul>
+  </div>
+
+  <div class="section" id="curry">
+    <h2>🍛 Curry & Chef Specialties</h2>
+    <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/486716859_9366047623486591_5787993897715903479_n.jpg?stp=c214.0.853.853a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=50ad20&_nc_ohc=sPsGlhYYWWkQ7kNvwGqM-LU&_nc_oc=AdmE5tzkpK_2-NtiNlxX5FcTvRKNxku6wZ3UnfWwzd9VqqRZ4Cl9LgMe5MbygxNU8kM&_nc_zt=23&_nc_ht=scontent.fcai19-2.fna&_nc_gid=Pufb1KRnWCZDZz3_1-V26g&oh=00_AfEomkN4w0dUDkcqxGy3tmZoeBCYjKcM931YZ4ModU0VpQ&oe=67FF714E" alt="Curry" class="dish-photo">
+    <ul>
+      <li>Butter Chicken  220  EGP</li>
+      <li>Chicken Curry  220  EGP</li>
+      <li>Chicken Tikka Masala  220  EGP</li>
+      <li>Chicken Jalfrezi  220  EGP</li>
+      <li>Beef Curry / Beef Sag  230  EGP</li>
+      <li>Lamb Kofta Curry / Lamb Curry / Lamb Rogan Josh  350  EGP</li>
+      <li>Fish Curry / Fish Tikka Curry   300  EGP</li>
+      <li>Shrimps Curry  300  EGP</li>
+      <li>Chicken Sag  220  EGP</li>
+    </ul>
+  </div>
+
+  <div class="section" id="soft-drinks">
+    <h2>🥤 Soft Drinks</h2>
+    <ul>
+      <li>Cola    40  EGP</li>
+      <li>Fanta    40  EGP</li>
+      <li>Sprite    40  EGP</li>
+    </ul>
+  </div>
+
+  <div class="section" id="dessert">
+    <h2>🍦 Dessert</h2>
+    <ul>
+    <li>kulfi   85  EGP</li>  
+    </ul>
+
+  </div>
+
+  <div class="section" id="lassi">
+    <h2>🥛 Lassi</h2>
+    <ul>
+      <li>Fresh Mango Lassi    80 EGP</li>
+      <li>Guava Juice    80 EGP</li>
+      <li>Lemon Juice    80 EGP</li>
+      <li>Lemon Mint Juice    80 EGP</li>
+      <li>Orange Juice    80 EGP</li>
+      <li>Salt and Sugar Lassi    80 EGP</li>
+    </ul>
+  </div>
+
+  <div class="section" id="hot-drinks">
+    <h2>☕ Hot Drinks</h2>
+    <ul>
+      <li>Indian Masala Tea    40  EGP</li>
+      <li>Mint Tea    40  EGP</li>
+      <li>Fresh Mint    40  EGP</li>
+      <li>Traditional Indian Tea    40  EGP</li>
+    </ul>
+  </div>
+
+  <div class="section" id="water">
+    <h2>💧 Water</h2>
+    <ul>
+      <li>Mineral Water    40  EGP</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>📍 Dahab, Egypt | ☎️ +20 100 518 7063</p>
+    <p>Open daily: 12 PM – 11 PM</p>
+    <p class="note">Follow us on Instagram: @namastedahab</p>
+  </footer>
+<!-- Video Section -->
+<div class="video-container">
+    <video id="myVideo" width="100%" controls autoplay>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+  
+  
+</body>
+</html>
