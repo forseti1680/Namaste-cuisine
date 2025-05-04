@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Now - Namaste Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="namaste-style.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f5f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background: linear-gradient(135deg, #d32f2f, #ff7043);
+      color: white;
+      border-bottom: 5px solid #e0c097;
+    }
+
+    header img {
+      max-width: 160px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin: 10px 0 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+    }
+
+    .order-section, .chat-container {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      border-top: 4px solid #d32f2f;
+    }
+
+    .order-section h2 {
+      text-align: center;
+      color: #d32f2f;
+      margin-bottom: 25px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .order-form input, .order-form select, .order-form textarea,
+    .chat-body input, .chat-body select, .chat-body textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .btn-book, .btn-whatsapp {
+      background: linear-gradient(135deg, #d32f2f, #ff7043);
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .btn-book:hover, .btn-whatsapp:hover {
+      background: linear-gradient(135deg, #b71c1c, #ff5722);
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .chat-header {
+      background-color: #075E54;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 15px 15px 0 0;
+      margin: -30px -30px 20px -30px;
+    }
+
+    .chat-footer {
+      text-align: center;
+      padding-top: 15px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 40px 10px;
+        gap: 30px;
+      }
+
+      header h1 {
+        font-size: 26px;
+      }
+
+      .order-section, .chat-container {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .btn-book, .btn-whatsapp {
+        padding: 12px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .order-section h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGO HEADER -->
+  <header>
+    <img src="logo.jpg" alt="Namaste Logo">
+    <h1>Namaste Indian Restaurant</h1>
+  </header>
+
+  <!-- FORMS SECTION -->
+  <div class="container">
+    
+      
+<!-- WhatsApp Order Form with Sections -->
+<div class="chat-container">
+  <div class="chat-header">💬 Order via WhatsApp</div>
+  <div class="chat-body">
+    <form id="whatsapp-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="tel" id="phone" placeholder="Your Phone Number" required />
+
+      <!-- Dish Sections -->
+      <div class="dish-section" id="starters">
+        <h3>🍽️ Starters</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Dal Soap">🍲🌱 Dal Soap - 65 EGP</span>
+          <span class="dish-tag" data-dish="Vegetable Samosa">🥟 Vegetable Samosa - 65 EGP</span>
+          <span class="dish-tag" data-dish="Chicken Samosa">🍗🥟 Chicken Samosa - 75 EGP</span>
+          <span class="dish-tag" data-dish="Pappadoms">🥟 (🥭🌶️) Pappadoms (served with mango & chutney) - 75 EGP</span>
+          <span class="dish-tag" data-dish="Paneer Pakora">🧀🧈 Paneer Pakora (Cheese in butter & fried) - 75 EGP</span>
+          <span class="dish-tag" data-dish="Raita / Kachumber Salad / Buhar Salad">🥒🥗 Raita - 60 EGP</span>     
+          <span class="dish-tag" data-dish="Kachumber Salad">🔪🍅🥒🥗kachumber salad - 60 EGP</span>
+          <span class="dish-tag" data-dish="Buhar Salad">🥗buhar salad - 60 EGP</span>  
+        </div>
+      </div>
+
+      <div class="dish-section" id="nans">
+        <h3>🍞 Nan & Bread</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Plain Nan">🍞 Plain Nan - 45 EGP</span>
+          <span class="dish-tag" data-dish="Garlic Nan">🧄🧈 Garlic Nan - 45 EGP</span>
+          <span class="dish-tag" data-dish="Butter Nan">🧈 Butter Nan - 45 EGP</span>
+          <span class="dish-tag" data-dish="Mint Nan">🌿🧈 Mint Nan - 45 EGP</span>
+          <span class="dish-tag" data-dish="Potato & Onions Nan">🧅🥔 Potato & Onions Nan - 60 EGP</span>
+          <span class="dish-tag" data-dish="Peshwari Nan">🥥🍇 Peshwari Nan - 60 EGP</span>
+          <span class="dish-tag" data-dish="Cheese Nan">🧀🧈 Cheese Nan - 60 EGP</span>
+        </div>
+      </div>
+      
+
+      <div class="dish-section" id="rice">
+        <h3>🍚 Rice & Biryani</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Indian Basmati Rice">🍚 Indian Basmati Rice - 45 EGP</span>
+          <span class="dish-tag" data-dish="Vegetable Pullao">🥗💚 Vegetable Pullao - 55 EGP</span>
+          <span class="dish-tag" data-dish="Sada Biryani">🥘 Sada Biryani - 75 EGP</span>
+          <span class="dish-tag" data-dish="Vegetable Biryani">🥘 & 🥗 Vegetable Biryani - 85 EGP</span>
+          <span class="dish-tag" data-dish="Murg Biryani">🐔🍛 Murg Biryani - 180 EGP</span>
+          <span class="dish-tag" data-dish="Beef Biryani">🍛🥩 Beef Biryani - 185 EGP</span>
+          <span class="dish-tag" data-dish="Lamb Biryani">🍛🍖 Murg Biryani - 180 EGP</span>
+          <span class="dish-tag" data-dish="Shrimp Biryani">🍤🍛 Shrimp Biryani - 250 EGP</span>
+        </div>
+      </div>
+      
+
+
+      <div class="dish-section" id="tandoori">
+        <h3>🔥 Tandoori & Tikka</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Tandoori Chicken Tikka">🍗❤️ Tandoori Chicken Tikka - 250 EGP</span>
+          <span class="dish-tag" data-dish="Murgh Malai Tikka">🌿🍋 Murgh Malai Tikka - 250 EGP</span>
+          <span class="dish-tag" data-dish="Chicken Tikka Nawab">🧅🍋 Chicken Tikka (Nawab) - 250 EGP</span>
+          <span class="dish-tag" data-dish="Seekh Kebab">🍢🥩 Seekh Kebab - 275 EGP</span>
+          <span class="dish-tag" data-dish="Mixed Chicken Tandoori">🔥🍗 Mixed Chicken Tandoori - 300 EGP</span>
+          <span class="dish-tag" data-dish="Mixed Seekh and Chicken Tikka">🍢🔥 Mixed (Seekh + Chicken Tikka) - 350 EGP</span>
+          <span class="dish-tag" data-dish="Fish Tikka">🐟 Fish Tikka - 300 EGP</span>
+          <span class="dish-tag" data-dish="King Prawn Tikka">🦐 King Prawn Tikka - 400 EGP</span>
+          <span class="dish-tag" data-dish="Mixed Seafood">🐟🦐🔥 Mixed Seafood (Fish + King Prawns) - 500 EGP</span>
+        </div>
+      </div>
+
+      <div class="dish-section" id="korma-madras-vindalo">
+      <h3>🤍korma & 🌶️ madras & 🥔🌶️🌶️ vindalo</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Vegetable Curry">🥦 Vegetable - 170 EGP</span>
+          <span class="dish-tag" data-dish="Chicken Curry">🍗 Chicken - 220 EGP</span>
+          <span class="dish-tag" data-dish="Beef Curry">🥩 Beef - 230 EGP</span>
+          <span class="dish-tag" data-dish="Lamb Curry">🍖 Lamb - 350 EGP</span>
+          <span class="dish-tag" data-dish="Fish Curry">🐟 Fish - 300 EGP</span>
+          <span class="dish-tag" data-dish="Shrimp Curry">🍤 Shrimp - 400 EGP</span>
+        </div>
+      </div>
+      
+
+      <div class="dish-section" id="vegetarian">
+        <h3>🥗🌿 Vegetarian</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Paneer Makhani">🧀 Paneer Makhani - 170 EGP</span>
+          <span class="dish-tag" data-dish="Paneer Tikka">🔥 Paneer Tikka - 170 EGP</span>
+          <span class="dish-tag" data-dish="Tandoori Salad">🍢🥗 Tandoori Salad - 170 EGP</span>
+          <span class="dish-tag" data-dish="Mushroom Curry">🍄 Mushroom Curry - 170 EGP</span>
+          <span class="dish-tag" data-dish="Seasonal Vegetable Curry">🥗 Seasonal Vegetable Curry - 170 EGP</span>
+          <span class="dish-tag" data-dish="Vegetable Jalfrezi">🥗🌶️ Vegetable Jalfrezi - 170 EGP</span>
+          <span class="dish-tag" data-dish="Aloo Mutter">🥔 Aloo Mutter - 170 EGP</span>
+          <span class="dish-tag" data-dish="Palak Paneer">🌿🧀 Palak Paneer - 170 EGP</span>
+          <span class="dish-tag" data-dish="Dal Makhani">🖤🥣 Dal Makhani 100 EGP</span>
+          <span class="dish-tag" data-dish="Dal tarka">💛🥣Dal tarka - 100 EGP</span>
+          <span class="dish-tag" data-dish="Aloo Chana Masala">🍛 Aloo Chana Masala - 170 EGP</span>
+          <span class="dish-tag" data-dish="Potato Sag">🥬🥔 Potato Sag - 170 EGP</span>
+          <span class="dish-tag" data-dish="Malay Kofta">🧆🥔 Malay Kofta - 170 EGP</span>
+          <span class="dish-tag" data-dish="Jira Aloo">🌰🥔 Jira Aloo - 170 EGP</span>
+        </div>
+      </div>
+      
+
+      <div class="dish-section" id="curry">
+        <h3>🍛 Curry & Chef Specialties</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Butter Chicken">🍗🍅🧈 Butter Chicken - 220 EGP</span>
+          <span class="dish-tag" data-dish="Chicken Curry">🍛 Chicken Curry - 220 EGP</span>
+          <span class="dish-tag" data-dish="Chicken Sag">🍗🌿 Chicken Sag - 220 EGP</span>
+          <span class="dish-tag" data-dish="Chicken Tikka Masala">🍗💚💛 Chicken Tikka Masala - 220 EGP</span>
+          <span class="dish-tag" data-dish="Chicken Jalfrezi">🍗🌶️ Chicken Jalfrezi - 220 EGP</span>
+          <span class="dish-tag" data-dish="Beef Curry">🥩🍛 Beef Curry - 230 EGP</span>
+          <span class="dish-tag" data-dish="Beef Sag">🥩🥬 Beef Sag - 230 EGP</span>
+          <span class="dish-tag" data-dish="Lamb Kofta Curry">🍖🍛 Lamb Kofta Curry - 350 EGP</span>
+          <span class="dish-tag" data-dish="Lamb Curry">🍛 Lamb Curry - 350 EGP</span>
+          <span class="dish-tag" data-dish="Lamb Rogan Josh">🍖🍅 Lamb Rogan Josh - 350 EGP</span>
+          <span class="dish-tag" data-dish="Fish Curry">🐟🍛 Fish Curry - 300 EGP</span>
+          <span class="dish-tag" data-dish="Fish Tikka">🍢🐟 Fish Tikka - 300 EGP</span>
+          <span class="dish-tag" data-dish="Shrimps Curry">🍤 Shrimps Curry - 300 EGP</span>
+        </div>
+      </div>
+      
+      
+
+      <div class="dish-section" id="dessert">
+        <h3>🍦 Dessert</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Kulfi">🍨 Kulfi - 85 EGP</span>
+        </div>
+      </div>
+      
+
+      <div class="dish-section" id="juice-lassi">
+        <h3>🧃🥛 Juice & Lassi</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Fresh Mango Lassi">🥭 Fresh Mango Lassi - 80 EGP</span>
+          <span class="dish-tag" data-dish="Guava Juice">🍐 Guava Juice - 80 EGP</span>
+          <span class="dish-tag" data-dish="Lemon Juice">🍋 Lemon Juice - 80 EGP</span>
+          <span class="dish-tag" data-dish="Lemon Mint Juice">🍋🌿 Lemon Mint Juice - 80 EGP</span>
+          <span class="dish-tag" data-dish="Orange Juice">🍊 Orange Juice - 80 EGP</span>
+          <span class="dish-tag" data-dish="Salt and Sugar Lassi">🧂 & 🍬 Salt and Sugar Lassi - 80 EGP</span>
+        </div>
+      </div>
+      
+
+      <div class="dish-section" id="soft-drinks">
+        <h3>🥤 Soft Drinks</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Cola">Cola 🥤❄️ - 40 EGP</span>
+          <span class="dish-tag" data-dish="Fanta">Fanta 🥤🍊❄️ - 40 EGP</span>
+          <span class="dish-tag" data-dish="Sprite">🍋🥤 Sprite - 40 EGP</span>
+        </div>
+      </div>
+      
+
+      <div class="dish-section" id="hot-drinks">
+        <h3>☕ Hot Drinks</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Indian Masala Tea">🧉 Indian Masala Tea - 75 EGP</span>
+          <span class="dish-tag" data-dish="Mint Tea">☕️🌿 Mint Tea - 40 EGP</span>
+          <span class="dish-tag" data-dish="Fresh Mint">🌿 Fresh Mint - 40 EGP</span>
+          <span class="dish-tag" data-dish="Traditional Indian Tea">☕️ Traditional Indian Tea - 40 EGP</span>
+        </div>
+      </div>
+      
+
+      <div class="dish-section" id="water">
+        <h3>💧🥤 Water</h3>
+        <div class="dish-options">
+          <span class="dish-tag" data-dish="Big Water">🥤 Big Water - 40 EGP</span>
+          <span class="dish-tag" data-dish="Small Water">💧 Small Water - 15 EGP</span>
+        </div>
+      </div>
+      
+
+      <textarea id="notes" placeholder="Any special request?" rows="3"></textarea>
+      <button type="submit" class="btn-whatsapp">Send Order on WhatsApp</button>
+    </form>
+  </div>
+  <div class="chat-footer">Namaste Restaurant ❤️ Dahab</div>
+</div>
+
+
+
+
+  <!-- Web Order Script -->
+  <script>
+    const form = document.querySelector(".order-form");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        dish: form.dish.value,
+        notes: form.notes.value
+      };
+
+      fetch("YOUR_GOOGLE_SCRIPT_URL", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" }
+      })
+      .then(res => res.text())
+      .then(response => {
+        alert("✅ Thank you! Your order has been placed.");
+        form.reset();
+      })
+      .catch(err => {
+        alert("❌ There was a problem sending your order.");
+        console.error(err);
+      });
+    });
+  </script>
+
+<script>
+  const selectedDishes = new Set();
+
+  document.querySelectorAll('.dish-options span').forEach(item => {
+    item.addEventListener('click', () => {
+      const dish = item.getAttribute('data-dish');
+      if (selectedDishes.has(dish)) {
+        selectedDishes.delete(dish);
+        item.classList.remove('selected');
+      } else {
+        selectedDishes.add(dish);
+        item.classList.add('selected');
+      }
+    });
+  });
+
+  document.getElementById("whatsapp-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const notes = document.getElementById("notes").value.trim();
+
+    const dishList = [...selectedDishes].map(d => `🍽️ ${d}`).join("\n");
+
+    const message = `*New Order from Namaste Website* 🧾
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+
+${dishList || 'No dish selected'}
+
+📝 Notes: ${notes || 'None'}
+
+Please confirm my order. Thank you! 🙏`;
+
+    const whatsappNumber = "201005187063";
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  });
+</script>
+
+<script>
+  // Zoom + rotate effect on images
+  document.querySelectorAll('img').forEach(img => {
+    img.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+    img.addEventListener('mouseover', () => {
+      img.style.transform = 'scale(1.05) rotate(1deg)';
+      img.style.boxShadow = '0 8px 20px rgba(0,0,0,0.3)';
+    });
+    img.addEventListener('mouseout', () => {
+      img.style.transform = 'scale(1) rotate(0deg)';
+      img.style.boxShadow = 'none';
+    });
+  });
+  
+  // Floating animation for emojis
+  function floatEmojis() {
+    document.querySelectorAll('.emoji').forEach(el => {
+      el.style.display = 'inline-block';
+      el.style.position = 'relative';
+      el.animate([
+        { transform: 'translateY(0)' },
+        { transform: 'translateY(-6px)' },
+        { transform: 'translateY(0)' }
+      ], {
+        duration: 2500 + Math.random() * 1000,
+        iterations: Infinity,
+        easing: 'ease-in-out',
+        delay: Math.random() * 1000
+      });
+    });
+  }
+  floatEmojis();
+  
+  // Animated dish tags
+  document.querySelectorAll('.dish-tag').forEach(tag => {
+    tag.style.transition = 'all 0.3s ease';
+    tag.addEventListener('mouseenter', () => {
+      tag.style.transform = 'scale(1.08)';
+      tag.style.boxShadow = '0 4px 12px rgba(255, 140, 0, 0.5)';
+      tag.style.backgroundColor = '#fff5e1';
+    });
+    tag.addEventListener('mouseleave', () => {
+      tag.style.transform = 'scale(1)';
+      tag.style.boxShadow = 'none';
+      tag.style.backgroundColor = '';
+    });
+  });
+  
+  // Pulsing effect for order buttons
+  document.querySelectorAll('.order-btn').forEach(btn => {
+    btn.animate([
+      { transform: 'scale(1)', boxShadow: '0 0 0 rgba(255,140,0,0.7)' },
+      { transform: 'scale(1.05)', boxShadow: '0 0 20px rgba(255,140,0,0.7)' },
+      { transform: 'scale(1)', boxShadow: '0 0 0 rgba(255,140,0,0.7)' }
+    ], {
+      duration: 1500,
+      iterations: Infinity
+    });
+  });
+  </script>
+  
+  
+</body>
+</html>
